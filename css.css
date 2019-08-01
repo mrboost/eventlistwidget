@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family={{fontName}}');
+html,
+.widget-EventList li> div {
+  transform: rotateX({{flipX}}deg) rotateY({{flipY}}deg);
+}
+
+.widget-EventList {
+  	font-weight:{{fontWeight}};
+    font-size: {{fontSize}}px;
+    font-family:{{fontName}};
+    overflow: hidden;
+    color: #444;
+    list-style: none;
+    padding: 0;
+    text-transform: uppercase;
+    position: relative;
+    transform: rotate(180deg);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
+.widget-EventList,
+.widget-EventList * {
+    box-sizing: border-box;
+}
+
+.widget-EventList li {
+    transform: rotate(-180deg);
+    line-height: 1.3em;
+    overflow: hidden;
+    margin-bottom: 0.1em;
+}
+
+.widget-EventList li> div:last-child {
+    /*padding: 0 10px;*/
+    height: 1.3em;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    text-align: right;
+    display: inline-block;
+    float: right;
+    white-space: nowrap;
+}
+
+.widget-EventList .tag {
+    float: right;
+    margin: 0 0.25em;
+    display: inline-block;
+}
+
+.widget-EventList .message {
+    float: right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0 0.25em;
+    display: inline-block;
+}
+.badge {
+    display: inline-block;
+    margin-right: -0.2em;
+    position: relative;
+    height: 1em;
+    vertical-align: middle;
+    top: -0.1em;
+}
+
+.widget-EventList li:first-child div:last-child {
+  background: {{bgColor}};
+  color:{{fontColor}};
+}
+
+.widget-EventList li:nth-child(2) div:last-child {
+  color:{{fontColor}};  
+  opacity: 0.8;
+  
+}
+
+.widget-EventList li:nth-child(3) div:last-child {
+    color:{{fontColor}};
+  	opacity: 0.5;
+}
+.widget-EventList li:nth-child(4) div:last-child {
+    color:{{fontColor}};
+  	opacity: 0.5;
+}
+.widget-EventList li:nth-child(5) div:last-child {
+    color:{{fontColor}};
+  	opacity: 0.5;
+}
+.widget-EventList li:nth-child(6) div:last-child {
+    color:{{fontColor}};
+  	opacity: 0.5;
+}
+.widget-EventList li> div:last-child {
+    animation: grow 0.5s forwards;
+    -webkit-animation: grow 0.5s forwards;
+  color: #444;
+}
+
+.widget-EventList li:nth-child(n+ 7) {
+    animation: fadeOut 1.5s forwards;
+    -webkit-animation: fadeOut 1.5s forwards;
+  color: #444;
+  opacity: 0.5;
+}
+.widget-EventList .event-sub1 {
+  content:url({{subage1}});
+}
+
+.widget-EventList .event-sub3 {
+   content:url({{subage3}});
+}
+.widget-EventList .event-sub6 {
+   content:url({{subage6}});
+}
+
+.widget-EventList .event-sub9 {
+   content:url({{subage9}});
+}
+.widget-EventList .event-sub12 {
+   content:url({{subage12}});
+}
+.widget-EventList .event-image {
+    width: 25px;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+   
+}
+@keyframes grow {
+    0% {
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+@-webkit-keyframes grow {
+    0% {
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
